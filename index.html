@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Time</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+    <form>
+        <center>
+            <h1>Format Time</h1>
+
+            <table cellpadding="10px">
+                <thead>
+                    <tr>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td width="30%">Input Waktu</td>
+                        <td><input type="time" class="form-control" name="waktu_awal" id="waktu_awal" value=""></td>
+                    </tr>
+                    <tr>
+                        <td width="30%">Output Waktu</td>
+                        <td><input type="text" class="form-control" name="waktu_akhir" id="waktu_akhir" disabled></td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="2" align="center">
+                            <input type="button" name="ubah" value="Ubah" onclick="ubahWaktu()">
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </center>
+    </form>
+    <script>
+        function ubahWaktu() {
+            var jam = document.getElementById("waktu_awal").value;
+            document.getElementById("waktu_akhir").value = jam;
+        }
+    </script>
+</body>
+
+</html>
